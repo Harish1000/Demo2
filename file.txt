@@ -1,1 +1,2 @@
 This line is added by branch1
+This line is added by branch2
