@@ -1,17 +1,20 @@
 pipeline{
 agent any
-tools{
-	maven 'M3'
-}
+
 stages{
-	stage('Checkout'){
+	stage('One'){
 		steps{
-			git 'https://github.com/Harish1000/Demo2.git'
+			echo "Hi"
 		}
 	}
-	stage('Build'){
+	stage('Two'){
 		steps{
-			bat 'mvn clear compile'
+			input('Do you want to proceed')
+		}
+	}
+	stage('Three'){
+		steps{
+			echo "Stage3"
 		}
 	}
 }
